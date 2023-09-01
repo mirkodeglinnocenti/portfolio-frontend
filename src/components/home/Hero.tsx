@@ -8,7 +8,9 @@ const Hero = () => {
             <h1 className="text-7xl font-bold mb-4">
               I&apos;m Mirko Degl&apos;Innocenti
             </h1>
-            <h3 className="font-extrabold text-2xl text-transparent bg-clip-text bg-gradient-to-r  from-primary-color to-secondary-color">Jr. Front-End Developer</h3>
+            <h4 className="font-extrabold text-2xl text-transparent bg-clip-text bg-gradient-to-r  from-primary-color to-secondary-color">
+              Jr. Front-End Developer
+            </h4>
           </div>
           <div className="w-1/2 flex justify-center">
             <img
