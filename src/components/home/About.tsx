@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <section className="Hero bg-color-dark text-color-light py-14">
+    <section className="About bg-color-dark text-color-light py-14">
       <div className="container mx-auto">
         <h3 className="font-bold text-3xl mb-5">
           <span className="font-extrabold text-2xl text-transparent bg-clip-text bg-gradient-to-r  from-primary-color to-secondary-color">
