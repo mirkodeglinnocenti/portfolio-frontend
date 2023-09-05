@@ -1,9 +1,9 @@
 const Header = () => {
   return (
     <header className="bg-color-light py-4 text-color-dark">
-      <div className="container mx-auto">
+      <div className="container px-5 mx-auto">
         <div className="flex justify-between items-center">
-          <div className="">MD</div>
+          <div className="p-3">MD</div>
           <ul className="flex gap-4 font-bold">
             <li>
               <a href="#">Home</a>
