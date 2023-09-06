@@ -5,7 +5,7 @@ import Api from "../components/home/Api";
 
 const Home = () => {
   return (
-    <div className='container px-5 bg-color-dark'>
+    <div className='bg-color-dark'>
       <Hero />
       <About />
       <Skills />

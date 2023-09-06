@@ -11,7 +11,7 @@ const Api = () => {
 
   return (
     <section className="text-color-light text-center py-7">
-      <div className="container">
+      <div className="container px-5 mx-auto">
         <h3>Api</h3>
         <ul>
           {apiResult.map((res, index) => (
