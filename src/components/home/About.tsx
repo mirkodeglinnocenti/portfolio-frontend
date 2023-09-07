@@ -1,8 +1,8 @@
 const About = () => {
   return (
-    <section className="About bg-color-dark text-color-light py-14">
-      <div className="container px-10 lg:px-20 2xl:px-40 mx-auto">
-        <h3 className="font-bold text-center text-2xl sm:text-3xl sm:text-start mb-5">
+    <section className="About bg-color-dark text-color-light py-14 text-center sm:text-start">
+      <div className="container px-10 lg:px-32 xl:px-40 2xl:px-60 mx-auto">
+        <h3 className="font-bold text-2xl sm:text-3xl mb-5">
           <span className="font-extrabold text-2xl text-transparent bg-clip-text bg-gradient-to-r  from-primary-color to-secondary-color">
             &lt;
           </span>
@@ -11,7 +11,7 @@ const About = () => {
             /&gt;
           </span>
         </h3>
-        <p className="sm:border-l-2 p-2 border-primary-color text-center sm:text-start">
+        <p className="sm:border-l-2 p-2 border-primary-color">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta
           ligula erat, ut consequat tellus ultricies a. Fusce blandit vulputate
           leo, id pharetra ante placerat interdum. Nunc a tempus nibh. Curabitur

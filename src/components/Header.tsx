@@ -25,13 +25,13 @@ const Header = () => {
   let [open, setOpen] = useState(false);
 
   return (
-    <header className="bg-color-light py-4 text-color-dark sticky top-0 z-50">
+    <header className="bg-color-light py-3 md:py-1 text-color-dark sticky top-0 z-50">
       <div className="container px-4 sm:px-20 mx-auto">
         <nav className="md:flex justify-between items-center">
           <div>
             <img src="/assets/img/logo.png" alt="logo di Mirko" />
           </div>
-          <div onClick={()=>setOpen(!open)} className="text-2xl absolute top-4 right-6 cursor-pointer md:hidden">
+          <div onClick={()=>setOpen(!open)} className="text-2xl absolute top-3 right-6 cursor-pointer md:hidden">
             <FontAwesomeIcon icon={!open ? faBars : faX} />
           </div>
           <div className={`${open ? "top-15" : "hidden"} md:flex gap-4 items-center absolute md:static left-0 w-full md:w-auto bg-color-light md:pl-0 pl-6 sm:pl-32 md:pb-0 pb-6`}>

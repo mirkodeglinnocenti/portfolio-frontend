@@ -1,6 +1,7 @@
 import Hero from "../components/home/Hero";
 import About from "../components/home/About";
 import Skills from "../components/home/Skills";
+import Contacts from "../components/home/Contacts";
 import Api from "../components/home/Api";
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
       <About />
       <Skills />
       <Api/>
+      <Contacts />
     </div>
   );
 };
