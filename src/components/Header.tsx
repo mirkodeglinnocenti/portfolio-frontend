@@ -14,7 +14,7 @@ const Header = () => {
     },
     {
       name: "Esperienza",
-      url: "/",
+      url: "#story",
     },
     {
       name: "Contatti",

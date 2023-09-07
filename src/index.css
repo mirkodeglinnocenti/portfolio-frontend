@@ -1,3 +1,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+@media (min-width: 640px) {
+    .my-card{
+        position: relative;
+    }
+    
+    .my-card::after{
+        position: absolute;
+        content: "";
+        width: 15px;
+        height: 15px;
+        background-color: #09C6F8;
+        border-radius: 10px;
+    }
+    
+    .my-card:nth-child(odd)::after{
+        top: 7px;
+        right: -50px;
+    }
+    
+    .my-card:nth-child(even)::after{
+        top: 7px;
+        left: -70px;
+    }
+    
+    /* vertical line Education */
+    .story-box::after{
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        content: "";
+        width: 2px;
+        height: 58%;
+        background-color: #09C6F8;
+    }
+
+    /* vertical line Experience*/
+    .experience-box::after{
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        content: "";
+        width: 2px;
+        height: 70%;
+        background-color: #09C6F8;
+    }
+}
