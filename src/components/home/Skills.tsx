@@ -65,7 +65,7 @@ const Skills = () => {
   ]);
 
   return (
-    <section className="Skills bg-color-dark text-color-light py-14 text-center">
+    <section id="skills" className="bg-color-dark text-color-light py-24 text-center">
       <div className="container px-10 lg:px-20 2xl:px-40 mx-auto">
         <h3 className="font-bold text-2xl sm:text-3xl mb-5">
           <span className="font-extrabold text-2xl text-transparent bg-clip-text bg-gradient-to-r  from-primary-color to-secondary-color">
