@@ -11,15 +11,15 @@ const Header = () => {
     },
     {
       name: "Linguaggi",
-      url: "#skills",
+      url: "/#skills",
     },
     {
       name: "Esperienza",
-      url: "#story",
+      url: "/#story",
     },
     {
       name: "Contatti",
-      url: "#contact",
+      url: "/#contact",
     },
   ]);
 
@@ -61,7 +61,7 @@ const Header = () => {
             </Link>
             <Link
               to="/login"
-              className="rounded-xl font-bold px-4 py-2 bg-gradient-to-r from-primary-color to-secondary-color hover:text-color-light"
+              className="rounded-xl font-bold px-4 py-2 ml-2 md:ml-0 bg-gradient-to-r from-primary-color to-secondary-color hover:text-color-light"
             >
               Accedi
             </Link>
