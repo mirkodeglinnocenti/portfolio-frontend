@@ -870,14 +870,14 @@ video {
   line-height: 1.75rem;
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .font-bold {
@@ -898,6 +898,11 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
 .text-primary-color {
   --tw-text-opacity: 1;
   color: rgb(9 198 248 / var(--tw-text-opacity));
@@ -905,21 +910,6 @@ video {
 
 .text-transparent {
   color: transparent;
-}
-
-.text-gray-400 {
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
-}
-
-.text-gray-300 {
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
-}
-
-.text-gray-200 {
-  --tw-text-opacity: 1;
-  color: rgb(229 231 235 / var(--tw-text-opacity));
 }
 
 .transition-transform {
@@ -968,7 +958,7 @@ html{
     left: 50%;
     content: "";
     width: 2px;
-    height: 58%;
+    height: 78%;
     background-color: #09C6F8;
   }
 
@@ -980,9 +970,13 @@ html{
     left: 50%;
     content: "";
     width: 2px;
-    height: 70%;
+    height: 82%;
     background-color: #09C6F8;
   }
+}
+
+.last\:border-b-0:last-child {
+  border-bottom-width: 0px;
 }
 
 .hover\:bg-gray-600:hover {

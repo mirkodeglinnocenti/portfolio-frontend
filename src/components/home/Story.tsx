@@ -10,12 +10,12 @@ const Story = () => {
 
   const [education] = useState([
     {
-      title: "Liceo scientifico indirizzo Scienze Applicate",
-      subtitle: "E.Balducci Pontassieve ~ 2013 - 2018",
+      title: "Corso in Full-Stack Web Development",
+      subtitle: "Boolean ~ 2022 - 2023",
       body: [
-        "basi di informatica",
-        "basi di programmazione",
-        "studio del linguaggio c e c++",
+        "Durata di 700 ore di lezioni ed esercitazioni quotidiane, con obiettivi e scadenze ben definite",
+        "3 settimane di progetto finale lavorando in team seguiti da pm",
+        "Appreso dei linguaggi frontend e backend, riproducendo funzionalità o aspetto di siti come Netflix, WhatsApp, Spotify, Discord, Portfolio, Dashboard",
       ],
     },
     {
@@ -29,24 +29,34 @@ const Story = () => {
       ],
     },
     {
-      title: "Corso in Full-Stack Web Development",
-      subtitle: "Boolean ~ 2022 - 2023",
+      title: "Liceo scientifico indirizzo Scienze Applicate",
+      subtitle: "E.Balducci Pontassieve ~ 2013 - 2018",
       body: [
-        "Durata di 700 ore di lezioni ed esercitazioni quotidiane, con obiettivi e scadenze ben definite",
-        "3 settimane di progetto finale lavorando in team seguiti da pm",
-        "Appreso dei linguaggi frontend e backend, riproducendo funzionalità o aspetto di siti come Netflix, WhatsApp, Spotify, Discord, Portfolio, Dashboard",
+        "basi di informatica",
+        "basi di programmazione",
+        "studio del linguaggio c e c++",
       ],
     },
   ]);
 
   const [experience] = useState([
     {
-      title: "Stage ufficio informatico del comune di Reggello",
-      subtitle: "Comune di Reggello(FI) ~ 2017",
+      title: "Jr. Front-End Developer",
+      subtitle: "Freedom Digital Systems ~ Agosto 2023 - Presente",
       body: [
-        "Installazione degli ssd in sostituzione agli hard disk",
-        "Utilizzo dei vari programmi di Microsoft Office",
-        "Assistenza ai vari uffici",
+        "Utilizzo di tecnologie come Tailwind, Typescript, REST API, autenticazioni SPA(cookie, jwt token, oidc), React per costruzione pagine web per il prodotto vetrineincloud.it",
+        "Approfondimento di argomenti come i protocolli TCP e UDP, Socket",
+        "Lavorato secondo la metodologia AGILE",
+        "Utilizzo di VsCode, Git",
+      ],
+    },
+    {
+      title: "Jr. Full Stack Developer Trainee",
+      subtitle: "Boolean ~ Novembre 2022 - Giugno 2023",
+      body: [
+        "Esercizi quotidiani da fare seguendo delle milestone",
+        "3 settimane di progetto in team utilizzando Git e Github lavorando su più repository con i branches",
+        "Replica siti web",
       ],
     },
     {
@@ -60,22 +70,12 @@ const Story = () => {
       ],
     },
     {
-      title: "Jr. Full Stack Developer Trainee",
-      subtitle: "Boolean ~ Novembre 2022 - Giugno 2023",
+      title: "Stage ufficio informatico del comune di Reggello",
+      subtitle: "Comune di Reggello(FI) ~ 2017",
       body: [
-        "Esercizi quotidiani da fare seguendo delle milestone",
-        "3 settimane di progetto in team utilizzando Git e Github lavorando su più repository con i branches",
-        "Replica siti web",
-      ],
-    },
-    {
-      title: "Jr. Front-End Developer",
-      subtitle: "Freedom Digital Systems ~ Agosto 2023 - Presente",
-      body: [
-        "Utilizzo di tecnologie come Tailwind, Typescript, REST API, autenticazioni SPA(cookie, jwt token, oidc), React per costruzione pagine web per il prodotto vetrineincloud.it",
-        "Approfondimento di argomenti come i protocolli TCP e UDP, Socket",
-        "Lavorato secondo la metodologia AGILE",
-        "Utilizzo di VsCode, Git",
+        "Installazione degli ssd in sostituzione agli hard disk",
+        "Utilizzo dei vari programmi di Microsoft Office",
+        "Assistenza ai vari uffici",
       ],
     },
   ]);
@@ -126,7 +126,7 @@ const Story = () => {
             return (
               <div
                 key={index}
-                className="my-card mb-5 pb-3 sm:pb-0 border-b-2 sm:border-b-0 border-primary-color sm:right-[128px] sm:even:left-[150px] md:right-[150px] md:even:left-[172px] lg:right-[178px] lg:even:left-[200px] xl:right-[222px] xl:even:left-[244px] 2xl:right-[237px] 2xl:even:left-[260px] sm:w-1/3"
+                className="my-card mb-5 pb-3 sm:pb-0 border-b-2 last:border-b-0 sm:border-b-0 border-primary-color sm:right-[128px] sm:even:left-[150px] md:right-[150px] md:even:left-[172px] lg:right-[178px] lg:even:left-[200px] xl:right-[222px] xl:even:left-[244px] 2xl:right-[237px] 2xl:even:left-[260px] sm:w-1/3"
               >
                 <div className="head mb-3">
                   <h6 className="text-lg font-bold">{ed.title}</h6>
@@ -152,7 +152,7 @@ const Story = () => {
             return (
               <div
                 key={index}
-                className="my-card mb-5 pb-3 sm:pb-0 border-b-2 sm:border-b-0 border-primary-color sm:right-[128px] sm:even:left-[150px] md:right-[150px] md:even:left-[172px] lg:right-[178px] lg:even:left-[200px] xl:right-[222px] xl:even:left-[244px] 2xl:right-[237px] 2xl:even:left-[260px] sm:w-1/3"
+                className="my-card mb-5 pb-3 sm:pb-0 border-b-2 last:border-b-0 sm:border-b-0 border-primary-color sm:right-[128px] sm:even:left-[150px] md:right-[150px] md:even:left-[172px] lg:right-[178px] lg:even:left-[200px] xl:right-[222px] xl:even:left-[244px] 2xl:right-[237px] 2xl:even:left-[260px] sm:w-1/3"
               >
                 <div className="head mb-3">
                   <h6 className="text-lg font-bold">{ed.title}</h6>

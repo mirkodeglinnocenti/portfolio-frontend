@@ -29,7 +29,7 @@ const Header = () => {
       <div className="container px-4 sm:px-20 mx-auto">
         <nav className="md:flex justify-between items-center">
           <div>
-            <img src="/assets/img/logo.png" alt="logo di Mirko" />
+            <img src="/assets/img/logo.svg" alt="logo di Mirko" />
           </div>
           <div onClick={()=>setOpen(!open)} className="text-2xl absolute top-3 right-6 cursor-pointer md:hidden">
             <FontAwesomeIcon icon={!open ? faBars : faX} />
