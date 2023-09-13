@@ -1,6 +1,8 @@
 import { useState } from "react";
+import AuthUser from "../../services/AuthUser";
 
 const LoginForm = () => {
+  const { http, setToken } = AuthUser();
   const [email, setEmail] = useState<undefined | string>(undefined);
   const [password, setPassword] = useState<undefined | string>(undefined);
 
@@ -18,28 +20,17 @@ const LoginForm = () => {
 
   // Fetch
   const submit = (event: React.FormEvent<HTMLFormElement>) => {
-    console.log(event);
-
     event.preventDefault();
     event.stopPropagation();
 
-    const User = {
-      email: email,
-      password: password,
-    };
-
-    fetch("", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(User),
-    })
-      .then((response) => {
-        console.log("utente registrato", response.json());
+    http
+      .post("/login", { email: email, password: password })
+      .then((res) => {
+        console.log("utente loggato", res.data);
+        setToken(res.data.user, res.data.access_token);
       })
       .catch((err) => {
-        console.log("Errore utente non registrato", err);
+        console.log("Errore utente non loggato", err);
       });
   };
 

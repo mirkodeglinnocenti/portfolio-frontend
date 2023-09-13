@@ -2,8 +2,9 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import AuthUser from "../services/AuthUser";
 
-const Header = () => {
+const HeaderAuth = () => {
   const [navItem] = useState([
     {
       name: "Home",
@@ -21,9 +22,21 @@ const Header = () => {
       name: "Contatti",
       url: "/contact",
     },
+    {
+      name: "Dashboard",
+      url: "/dashboard",
+    },
   ]);
 
   let [open, setOpen] = useState(false);
+
+  //   logout utente
+  const { token, logout } = AuthUser();
+  const logoutUser = () => {
+    if (token !== undefined) {
+      logout();
+    }
+  };
 
   return (
     <header className="bg-color-light py-3 md:py-1 text-color-dark sticky top-0 z-50">
@@ -53,18 +66,13 @@ const Header = () => {
                 </li>
               ))}
             </ul>
-            <Link
-              to="/registration"
+            <span
+              role="button"
               className="rounded-xl font-bold px-4 py-2 bg-gradient-to-r from-primary-color to-secondary-color hover:text-color-light"
+              onClick={logoutUser}
             >
-              Registrati
-            </Link>
-            <Link
-              to="/login"
-              className="rounded-xl font-bold px-4 py-2 ml-2 md:ml-0 bg-gradient-to-r from-primary-color to-secondary-color hover:text-color-light"
-            >
-              Accedi
-            </Link>
+              Esci
+            </span>
           </div>
         </nav>
       </div>
@@ -72,4 +80,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderAuth;

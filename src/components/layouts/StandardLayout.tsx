@@ -1,16 +1,19 @@
-import { Outlet } from "react-router-dom"
-import Header from "../Header"
-import Footer from '../Footer'
+import { Outlet } from "react-router-dom";
+import AuthUser from "../../services/AuthUser";
+import Header from "../Header";
+import HeaderAuth from "../HeaderAuth";
+import Footer from "../Footer";
 
-const StandardLayout = () =>{
-return(
+const StandardLayout = () => {
+  const { getToken } = AuthUser();
+
+  return (
     <>
-        <Header />
-        <Outlet/>
-        <Footer/>
+      {!getToken() ? <Header /> : <HeaderAuth />}
+      <Outlet />
+      <Footer />
     </>
-)
+  );
+};
 
-}
-
-export default StandardLayout
+export default StandardLayout;
