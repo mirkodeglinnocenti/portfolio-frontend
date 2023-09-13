@@ -1,11 +1,9 @@
-import AuthUser from "../services/AuthUser"
+import Panel from "../components/dashboard/Panel";
 
 const Dashboard = () => {
-    const {user} = AuthUser();
     return (
-        <div>
-            <h1>Dashboard frf</h1>
-            <p>la tua email:{user.email}</p>
+        <div className='bg-color-dark text-color-light'>
+            <Panel />
         </div>
     )
 }

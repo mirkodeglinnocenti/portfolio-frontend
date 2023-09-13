@@ -30,7 +30,9 @@ const Header = () => {
       <div className="container px-4 sm:px-20 mx-auto">
         <nav className="md:flex justify-between items-center">
           <div>
-            <img src="/assets/img/logo.svg" alt="logo di Mirko" />
+            <Link to={"/"}>
+             <img src="/assets/img/logo.svg" alt="logo di Mirko" />
+            </Link>
           </div>
           <div
             onClick={() => setOpen(!open)}

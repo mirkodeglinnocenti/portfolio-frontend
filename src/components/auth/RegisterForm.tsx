@@ -1,8 +1,13 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import AuthUser from "../../services/AuthUser";
 
 const RegisterForm = () => {
+  const navigate = useNavigate();
+  const { http } = AuthUser();
   const [email, setEmail] = useState<undefined | string>(undefined);
   const [password, setPassword] = useState<undefined | string>(undefined);
+  const [passwordConf, setPasswordConf] = useState<undefined | string>(undefined);
 
   // Set Email
   const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -16,30 +21,28 @@ const RegisterForm = () => {
     console.log(password);
   };
 
+  // Set Password Conf
+  const handlePasswordConf = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPasswordConf(e.target.value);
+    console.log(password);
+  };
+
   // Fetch
   const submit = (event: React.FormEvent<HTMLFormElement>) => {
-    console.log(event);
-
     event.preventDefault();
     event.stopPropagation();
-
-    const newUser = {
-      email: email,
-      password: password,
-    };
-
-    fetch("", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newUser),
-    })
-      .then((response) => {
-        console.log("utente registrato", response.json());
+    
+    http
+      .post("/register", {
+        email: email,
+        password: password,
+        password_confirmation: passwordConf,
+      })
+      .then((res) => {
+        navigate("/login");
       })
       .catch((err) => {
-        console.log("Errore utente non registrato", err);
+        console.log("Errore utente non loggato", err);
       });
   };
 
@@ -68,6 +71,16 @@ const RegisterForm = () => {
                 type="password"
                 name="password"
                 onChange={handlePassword}
+                required
+              />
+            </div>
+            <div className="password contents">
+              <label>Conferma la password*</label>
+              <input
+                className="border-gray-950 border-2 rounded-full mb-4 px-2"
+                type="password"
+                name="passwordconf"
+                onChange={handlePasswordConf}
                 required
               />
             </div>
