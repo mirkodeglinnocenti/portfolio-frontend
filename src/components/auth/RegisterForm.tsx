@@ -38,7 +38,7 @@ const RegisterForm = () => {
         password: password,
         password_confirmation: passwordConf,
       })
-      .then((res) => {
+      .then(() => {
         navigate("/login");
       })
       .catch((err) => {
