@@ -12,15 +12,15 @@ const HeaderAuth = () => {
     },
     {
       name: "Linguaggi",
-      url: "/skills",
+      url: "/#skills",
     },
     {
       name: "Esperienza",
-      url: "/story",
+      url: "/#story",
     },
     {
       name: "Contatti",
-      url: "/contact",
+      url: "/#contact",
     },
     {
       name: "Dashboard",
@@ -43,7 +43,9 @@ const HeaderAuth = () => {
       <div className="container px-4 sm:px-20 mx-auto">
         <nav className="md:flex justify-between items-center">
           <div>
-            <img src="/assets/img/logo.svg" alt="logo di Mirko" />
+            <Link to={"/"}>
+              <img src="/assets/img/logo.svg" alt="logo di Mirko" />
+            </Link>
           </div>
           <div
             onClick={() => setOpen(!open)}
@@ -62,7 +64,11 @@ const HeaderAuth = () => {
                   key={index}
                   className="md:py-0 my-6 hover:text-primary-color"
                 >
-                  <Link to={item.url}>{item.name}</Link>
+                  {/#/.test(item.url) ? (
+                    <a href={item.url}>{item.name}</a>
+                  ) : (
+                    <Link to={item.url}>{item.name}</Link>
+                  )}
                 </li>
               ))}
             </ul>

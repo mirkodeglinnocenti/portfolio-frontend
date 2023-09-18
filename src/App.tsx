@@ -18,15 +18,16 @@ function App() {
       <Routes>
         <Route element={<StandardLayout />}>
           <Route path="/" element={<Home />}></Route>
-          <Route path="/skills" element={<Skills />}></Route>
+          {/* <Route path="/skills" element={<Skills />}></Route>
           <Route path="/story" element={<Story />}></Route>
-          <Route path="/contact" element={<Footer />}></Route>
+          <Route path="/contact" element={<Footer />}></Route> */}
           <Route path="/registration" element={<Register />}></Route>
           <Route path="/login" element={<Login />}></Route>
-          <Route
+          <Route path="/dashboard" element={<Dashboard />}></Route>
+          {/* <Route
             path="/dashboard"
             element={getToken() ? <Dashboard /> : <Navigate to="/login" />}
-          ></Route>
+          ></Route> */}
         </Route>
       </Routes>
     </>
