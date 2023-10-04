@@ -6,6 +6,22 @@ import { baseURL } from './ApiConst';
 export default function AuthUser() {
     const navigate = useNavigate();
 
+    // Prende i dati dalla sessione
+    const getToken =() => {
+        const tokenString:any = sessionStorage.getItem('token');
+        const userToken:any = JSON.parse(tokenString);
+        return userToken;
+    }
+
+    const getUser = () => {
+        const userString:any = sessionStorage.getItem('user');
+        const user_detail:any = JSON.parse(userString);
+        return user_detail;
+    }
+
+    const [token, setToken] = useState(getToken());
+    const [user, setUser] = useState(getUser());
+
     // Salva i dati nello store della sessione e fa il redirect alla dashboard
     const saveToken = (user:any, token:any) => {
         sessionStorage.setItem('token', JSON.stringify(token));
@@ -22,22 +38,6 @@ export default function AuthUser() {
         navigate('/login');
     }
 
-    // Prende i dati dalla sessione
-    const getToken =() => {
-        const tokenString:any = sessionStorage.getItem('token');
-        const userToken:any = JSON.parse(tokenString);
-        return userToken;
-    }
-
-    const getUser = () => {
-        const userString:any = sessionStorage.getItem('user');
-        const user_detail:any = JSON.parse(userString);
-        return user_detail;
-    }
-
-    const [token, setToken] = useState(getToken());
-    const [user, setUser] = useState(getUser());
-    
     const http = axios.create({
         baseURL: baseURL.online,
         headers: {

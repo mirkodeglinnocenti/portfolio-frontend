@@ -63,7 +63,7 @@ const LoginForm = () => {
               />
             </div>
             <button
-              className="rounded-xl font-bold px-4 py-2 bg-gradient-to-r from-primary-color to-secondary-color hover:text-color-light"
+              className="rounded-xl font-bold px-4 py-2 bg-primary-color text-white hover:text-color-light"
               type="submit"
             >
               Accedi

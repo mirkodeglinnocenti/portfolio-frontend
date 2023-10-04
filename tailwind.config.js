@@ -7,12 +7,13 @@ export default {
     },
     extend: {
       colors: {
-        "primary-color": "#09C6F8",
-        "secondary-color": "#2EDEC9",
-        "color-light": "#FFFFFF",
+        "primary-color": "var(--primary-color)",
+        // "secondary-color": "var(--primary-color)",
+        "color-light": "#dddcdc",
         "color-dark": "#25262C",
-        gradient:
-          "linear-gradient(90deg, rgba(9,198,248,1) 15%, rgba(46,222,201,1) 100%)",
+        "color-grey": "#838383",
+        // gradient:
+          // "linear-gradient(90deg, rgba(9,198,248,1) 15%, rgba(46,222,201,1) 100%)",
       }
     },
   },

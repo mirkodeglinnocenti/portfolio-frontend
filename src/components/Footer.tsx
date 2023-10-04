@@ -3,11 +3,11 @@ const Contacts = () => {
       <section id="contact" className="About bg-color-dark text-color-light py-14 text-center sm:text-start">
         <div className="container px-10 lg:px-32 xl:px-40 2xl:px-60 mx-auto">
           <h3 className="font-bold text-2xl sm:text-3xl mb-5">
-            <span className="font-extrabold text-2xl text-transparent bg-clip-text bg-gradient-to-r  from-primary-color to-secondary-color">
+            <span className="font-extrabold text-2xl text-primary-color">
               &lt;
             </span>
             Contact
-            <span className="font-extrabold text-2xl text-transparent bg-clip-text bg-gradient-to-r  from-primary-color to-secondary-color">
+            <span className="font-extrabold text-2xl text-primary-color">
               /&gt;
             </span>
           </h3>
@@ -20,11 +20,11 @@ const Contacts = () => {
             </li>
             <li>
               <h3 className="font-bold text-2xl sm:text-3xl mb-5">
-                <span className="font-extrabold text-2xl text-transparent bg-clip-text bg-gradient-to-r  from-primary-color to-secondary-color">
+                <span className="font-extrabold text-2xl text-primary-color">
                   &lt;
                 </span>
                 Social
-                <span className="font-extrabold text-2xl text-transparent bg-clip-text bg-gradient-to-r  from-primary-color to-secondary-color">
+                <span className="font-extrabold text-2xl text-primary-color">
                   /&gt;
                 </span>
               </h3>
