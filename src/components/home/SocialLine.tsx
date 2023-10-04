@@ -54,7 +54,7 @@ export default function SocialLine() {
           </svg>
         </a>
       </div>
-      <div className="h-screen border-l-4 border-primary-color ml-4"></div>
+      <div className="h-screen border-l-4 border-primary-color ml-3"></div>
     </div>
   );
 }
