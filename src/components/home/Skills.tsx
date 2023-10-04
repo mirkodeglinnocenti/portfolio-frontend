@@ -64,15 +64,33 @@ const Skills = () => {
     },
   ]);
 
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+  
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+  
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
+  
+  window.addEventListener("scroll", reveal);
+
   return (
-    <section id="skills" className="bg-color-dark text-color-light py-24 text-center">
+    <section id="skills" className="skills-section reveal bg-color-dark text-color-light py-24 text-center">
       <div className="container px-10 lg:px-20 2xl:px-40 mx-auto">
         <h3 className="font-bold text-2xl sm:text-3xl mb-5">
-          <span className="font-extrabold text-2xl text-transparent bg-clip-text bg-gradient-to-r  from-primary-color to-secondary-color">
+          <span className="font-extrabold text-2xl text-primary-color">
             &lt;
           </span>
           Skills
-          <span className="font-extrabold text-2xl text-transparent bg-clip-text bg-gradient-to-r  from-primary-color to-secondary-color">
+          <span className="font-extrabold text-2xl text-primary-color">
             /&gt;
           </span>
         </h3>

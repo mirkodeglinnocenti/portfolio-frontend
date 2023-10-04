@@ -2,55 +2,132 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
-    scroll-behavior: smooth;
+.root,
+#root,
+#docs-root {
+  --primary-color: #5893fd; /*old color #09C6F8*/
+  --secondary-color: #2edec9; /*old color #2EDEC9*/
+  --color-light: #dddcdc; /*old color #ffffff*/
+  --color-dark: #25262c;
+  --color-grey: #838383;
 }
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 @media (min-width: 640px) {
-    .my-card{
-        position: relative;
-    }
-    
-    .my-card::after{
-        position: absolute;
-        content: "";
-        width: 15px;
-        height: 15px;
-        background-color: #09C6F8;
-        border-radius: 10px;
-    }
-    
-    .my-card:nth-child(odd)::after{
-        top: 7px;
-        right: -50px;
-    }
-    
-    .my-card:nth-child(even)::after{
-        top: 7px;
-        left: -70px;
-    }
-    
-    /* vertical line Education */
-    .story-box::after{
-        position: absolute;
-        top: 10px;
-        left: 50%;
-        content: "";
-        width: 2px;
-        height: 78%;
-        background-color: #09C6F8;
-    }
+  .my-card {
+    position: relative;
+  }
 
-    /* vertical line Experience*/
-    .experience-box::after{
-        position: absolute;
-        top: 10px;
-        left: 50%;
-        content: "";
-        width: 2px;
-        height: 82%;
-        background-color: #09C6F8;
-    }
+  .my-card::after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+  }
+
+  .my-card:nth-child(odd)::after {
+    top: 7px;
+    right: -50px;
+  }
+
+  .my-card:nth-child(even)::after {
+    top: 7px;
+    left: -70px;
+  }
+
+  /* vertical line Education */
+  .education-box::after {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    content: "";
+    width: 2px;
+    height: 78%;
+    background-color: var(--primary-color);
+  }
+
+  /* vertical line Experience*/
+  .experience-box::after {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    content: "";
+    width: 2px;
+    height: 82%;
+    background-color: var(--primary-color);
+  }
+}
+
+/* Animation */
+.social-line {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.hero {
+  animation-duration: 2.5s;
+}
+
+.work-position {
+  animation-duration: 2s;
+}
+
+.story-box{
+  animation-duration: 1s;
+}
+
+/* Fade in bottom */
+.fadeInBottom {
+  animation-name: fadeInBottom;
+}
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Fade in */
+.fadeIn {
+  animation-name: fadeIn;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Fade in Left */
+.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30%);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
 }
