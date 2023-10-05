@@ -106,7 +106,7 @@ const Story = () => {
             onClick={() => { setIsEducation(true); setFadeIn()}}
             className={`${
               isEducation ? "text-primary-color" : ""
-            } cursor-pointer font-bold text-xl sm:text-2xl`}
+            } cursor-pointer font-bold text-xl sm:text-2xl hover:scale-105 transition-transform duration-200`}
           >
             <FontAwesomeIcon icon={faGraduationCap} className="mr-2" />
             Education
@@ -115,7 +115,7 @@ const Story = () => {
             onClick={() => { setIsEducation(false); setFadeIn()}}
             className={`${
               !isEducation ? "text-primary-color" : ""
-            } cursor-pointer font-bold text-xl sm:text-2xl`}
+            } cursor-pointer font-bold text-xl sm:text-2xl hover:scale-105 transition-transform duration-200`}
           >
             <FontAwesomeIcon icon={faBriefcase} className="mr-2" />
             Experience
