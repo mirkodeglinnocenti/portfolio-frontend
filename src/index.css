@@ -32,12 +32,12 @@ html {
 
   .my-card:nth-child(odd)::after {
     top: 7px;
-    right: -53px;
+    right: -50px;
   }
 
   .my-card:nth-child(even)::after {
     top: 7px;
-    left: -73px;
+    left: -70px;
   }
 
   /* vertical line Education */
