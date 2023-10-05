@@ -31,9 +31,19 @@ const Projects = () => {
       url: "https://freelanceportfolio-plum.vercel.app/",
     },
     {
-      title: "Prima pagina responsive con Bootstrap",
-      description: "Esercizio per studiare Bootstrap lato responsive.",
-      url: "https://mirkodeglinnocenti.github.io/html-css-bootstrap-freelancer/",
+      title: "Dashboard responsive con Bootstrap",
+      description: "Creata una dashboard con bootstrap per allenamento lato responsive",
+      url: "https://mirkodeglinnocenti.github.io/html-css-bootstrap-dashboard/",
+    },
+    {
+      title: "Riproduzione di WhatsApp semplificata",
+      description: "In questa riproduzione è possibile mandare dei messaggi diversi per ogni singolo contatto e ricevere una risposta automatica dopo pochi secondi",
+      url: "https://mirkodeglinnocenti.github.io/vue-boolzapp/",
+    },
+    {
+      title: "Catalogo di film e serie tv tramite ricerca",
+      description: "In questo progetto è stata riprodotta una ricerca tramite il titolo del film o serie tv inserito facendo delle chiamate api",
+      url: "https://boolflix-three.vercel.app/",
     },
   ];
   return (
