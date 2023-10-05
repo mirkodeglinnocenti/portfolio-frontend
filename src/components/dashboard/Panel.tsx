@@ -22,7 +22,7 @@ const Panel = () => {
           <img
             src="assets/img/dashboard.svg"
             alt="illustrazione"
-            className="w-2/3 md:w-1/2"
+            className="w-2/3 md:w-1/2 fill-color-light hover:fill-primary-color duration-200"
           />
         </div>
       </div>

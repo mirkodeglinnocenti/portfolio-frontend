@@ -592,6 +592,10 @@ video {
   left: 5%;
 }
 
+.right-40 {
+  right: 10rem;
+}
+
 .right-6 {
   right: 1.5rem;
 }
@@ -604,8 +608,24 @@ video {
   top: 0.75rem;
 }
 
+.top-48 {
+  top: 12rem;
+}
+
 .top-\[70\%\] {
   top: 70%;
+}
+
+.top-\[15\%\] {
+  top: 15%;
+}
+
+.right-\[10\%\] {
+  right: 10%;
+}
+
+.right-\[5\%\] {
+  right: 5%;
 }
 
 .z-50 {
@@ -784,6 +804,10 @@ video {
   border-radius: 1rem;
 }
 
+.rounded-\[50\%\] {
+  border-radius: 50%;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
@@ -818,8 +842,7 @@ video {
 }
 
 .bg-color-dark {
-  --tw-bg-opacity: 1;
-  background-color: rgb(37 38 44 / var(--tw-bg-opacity));
+  background-color: var(--color-dark);
 }
 
 .bg-gray-700 {
@@ -847,7 +870,11 @@ video {
 }
 
 .fill-color-light {
-  fill: #dddcdc;
+  fill: var(--color-light);
+}
+
+.stroke-primary-color {
+  stroke: var(--primary-color);
 }
 
 .p-10 {
@@ -977,14 +1004,16 @@ video {
   font-style: italic;
 }
 
+.leading-\[70px\] {
+  line-height: 70px;
+}
+
 .text-color-grey {
-  --tw-text-opacity: 1;
-  color: rgb(131 131 131 / var(--tw-text-opacity));
+  color: var(--color-grey);
 }
 
 .text-color-light {
-  --tw-text-opacity: 1;
-  color: rgb(221 220 220 / var(--tw-text-opacity));
+  color: var(--color-light);
 }
 
 .text-gray-300 {
@@ -1028,17 +1057,31 @@ video {
   transition-duration: 500ms;
 }
 
-.root,
-#root,
-#docs-root {
-  --primary-color: #5893fd;
-  /*old color #09C6F8*/
-  --secondary-color: #2edec9;
-  /*old color #2EDEC9*/
+body{
   --color-light: #dddcdc;
   /*old color #ffffff*/
   --color-dark: #25262c;
   --color-grey: #838383;
+}
+
+body.mi {
+  --primary-color: #5893fd;
+  /*old color #09C6F8*/
+}
+
+body.orange {
+  --primary-color: #e9b05b;
+  /*old color #09C6F8*/
+}
+
+body.red {
+  --primary-color: #fa716c;
+  /*old color #09C6F8*/
+}
+
+body.green {
+  --primary-color: #2edec9;
+  /*old color #09C6F8*/
 }
 
 html {
@@ -1109,7 +1152,7 @@ html {
   animation-duration: 2s;
 }
 
-.story-box{
+.story-box {
   animation-duration: 1s;
 }
 
@@ -1206,8 +1249,7 @@ html {
 }
 
 .hover\:text-color-light:hover {
-  --tw-text-opacity: 1;
-  color: rgb(221 220 220 / var(--tw-text-opacity));
+  color: var(--color-light);
 }
 
 .hover\:text-primary-color:hover {
@@ -1343,6 +1385,10 @@ html {
 
   .md\:ml-0 {
     margin-left: 0px;
+  }
+
+  .md\:block {
+    display: block;
   }
 
   .md\:flex {

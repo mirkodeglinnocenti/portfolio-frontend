@@ -4,6 +4,7 @@ import Skills from "../components/home/Skills";
 import Story from "../components/home/Story";
 import SocialLine from "../components/home/SocialLine";
 import Projects from "../components/home/Projects";
+import ColorButton from "../components/home/ColorButton";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Story/>
       <Projects/>
       <SocialLine/>
+      <ColorButton/>
     </div>
   );
 };
