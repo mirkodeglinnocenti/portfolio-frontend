@@ -1061,12 +1061,12 @@ html {
 
   .my-card:nth-child(odd)::after {
     top: 7px;
-    right: -50px;
+    right: -53px;
   }
 
   .my-card:nth-child(even)::after {
     top: 7px;
-    left: -70px;
+    left: -73px;
   }
 
   /* vertical line Education */
