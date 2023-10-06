@@ -35,7 +35,7 @@ const LoginForm = () => {
   };
 
   return (
-    <section className="py-8">
+    <section className="py-8 h-[60vh]">
       <div className="container mx-auto">
         <h1 className="font-bold text-center sm:text-3xl text-gray-800 mb-4">
           Accedi
