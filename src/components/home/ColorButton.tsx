@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 
 export default function ColorButton() {
-  const color = ["mi", "orange", "red", "green"];
-  const [currentColorIndex, setCurrentColorIndex] = useState(0);
+  const color = ["blue", "orange", "red", "green"];
+  const sessionColor = localStorage.getItem("color");
+  const initialColorIndex = sessionColor ? parseInt(sessionColor) : 0;
+  const [currentColorIndex, setCurrentColorIndex] = useState(initialColorIndex);
 
   useEffect(() => {
-    
     // Rimuovi la classe precedente
     if (currentColorIndex === 0) {
       document.body.classList.remove(color[color.length - 1]);
@@ -17,6 +18,9 @@ export default function ColorButton() {
     const currentColorClass = color[currentColorIndex];
     if (currentColorClass) {
       document.body.classList.add(currentColorClass);
+      // salvo nello storage la preferenza
+      console.log("ciao")
+      localStorage.setItem("color", `${currentColorIndex}`);
     }
   }, [currentColorIndex]);
 
